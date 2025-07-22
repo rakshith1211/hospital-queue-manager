@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link href="/src/style.css" rel="stylesheet" />
+  <title>Hospital Queue Management</title>
+</head>
+<body>
+  <div class="container">
+    <h1>🏥 Hospital Queue Management</h1>
+    <form id="form">
+      <input type="text" id="name" placeholder="Patient Name" required />
+      <select id="emergency" required>
+        <option value="">Emergency Level</option>
+        <option value="1">Critical</option>
+        <option value="2">Moderate</option>
+        <option value="3">Normal</option>
+      </select>
+      <input type="text" id="symptoms" placeholder="Symptoms" required />
+      <button type="submit">Check-In</button>
+    </form>
+
+    <h2>📝 Patient Queue</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Priority</th>
+          <th>Symptoms</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="queueBody"></tbody>
+    </table>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
